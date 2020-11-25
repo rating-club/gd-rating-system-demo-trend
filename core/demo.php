@@ -32,14 +32,16 @@ class gdrts_core_demo_trend {
 	}
 
 	public function thumbs_themes( $themes ) {
-		$themes['trend']         = 'Trends Article';
-		$themes['trend-comment'] = 'Trends Comment';
+		$themes['trend']           = 'Trends Article';
+		$themes['trend-comment']   = 'Trends Comment';
+		$themes['trend-in-widget'] = 'Trends in Widget';
 
 		return $themes;
 	}
 
 	public function register() {
 		require_once( GDRTS_DT_PATH . 'core/font.php' );
+
 		gdrts_register_font( 'gdrts-trend', new gdrts_font_trend() );
 	}
 
