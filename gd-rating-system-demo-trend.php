@@ -41,9 +41,4 @@ $gdrts_dt_urlname_basic = plugins_url( '/gd-rating-system-demo-trend/' );
 define( 'GDRTS_DT_PATH', $gdrts_dt_dirname_basic );
 define( 'GDRTS_DT_URL', $gdrts_dt_urlname_basic );
 
-add_action( 'gdrts_init', 'gdrts_dt_load_entry_point' );
-
-function gdrts_dt_load_entry_point() {
-	require_once( GDRTS_DT_PATH . 'core/font.php' );
-	require_once( GDRTS_DT_PATH . 'core/demo.php' );
-}
+require_once( GDRTS_DT_PATH . 'core/demo.php' );

@@ -29,6 +29,7 @@ class gdrts_core_demo_trend {
 	}
 
 	public function register() {
+		require_once( GDRTS_DT_PATH . 'core/font.php' );
 		gdrts_register_font( 'gdrts-trend', new gdrts_font_trend() );
 	}
 
