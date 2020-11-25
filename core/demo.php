@@ -6,13 +6,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class gdrts_core_demo_trend {
 	public function __construct() {
+		/* Register new template storage path */
 		add_filter( 'gdrts_default_templates_storage_paths', array( $this, 'templates' ) );
+
+		/* Register new thumbs styling themes */
 		add_filter( 'gdrts_list_thumbs_style_theme', array( $this, 'thumbs_themes' ) );
 
+		/* Register new thumbs font */
 		add_action( 'gdrts_register_icons_fonts', array( $this, 'register' ) );
+
+		/* Load the replacement render class */
 		add_action( 'gdrts_single_render_pre_process', array( $this, 'render' ) );
 
-		add_action( 'gdrts_enqueue_core_files_after_evenets', array( $this, 'enqueue' ) );
+		/* Register demo plugin JavaScript */
+		add_action( 'gdrts_register_enqueue_files', array( $this, 'register_enqueue_files' ), 10, 4 );
+
+		/* Enqueue demo plugin JavaScript */
+		add_action( 'gdrts_enqueue_core_files', array( $this, 'enqueue_core_files' ), 10, 2 );
 	}
 
 	public function templates( $paths ) {
@@ -37,8 +47,12 @@ class gdrts_core_demo_trend {
 		require_once( GDRTS_DT_PATH . 'core/render.php' );
 	}
 
-	public function enqueue() {
-		wp_enqueue_script( 'gdrts-demo-trend', GDRTS_DT_URL . 'js/trend.js', array( 'gdrts-events' ) );
+	public function register_enqueue_files( $load_js, $load_css, $js, $css ) {
+		wp_register_script( 'gdrts-demo-trend', GDRTS_DT_URL . 'js/trend.js', array( 'gdrts-events' ) );
+	}
+
+	public function enqueue_core_files( $load_js, $load_css ) {
+		wp_enqueue_script( 'gdrts-demo-trend' );
 	}
 }
 
