@@ -1,32 +1,33 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: 'gdrts-trend';
-  src:  url('fonts/gdrts-trend.eot?cm7cri');
-  src:  url('fonts/gdrts-trend.eot?cm7cri#iefix') format('embedded-opentype'),
+    font-family: 'gdrts-trend';
+    src: url('fonts/gdrts-trend.eot?cm7cri');
+    src: url('fonts/gdrts-trend.eot?cm7cri#iefix') format('embedded-opentype'),
     url('fonts/gdrts-trend.ttf?cm7cri') format('truetype'),
     url('fonts/gdrts-trend.woff?cm7cri') format('woff'),
     url('fonts/gdrts-trend.svg?cm7cri#gdrts-trend') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-weight: normal;
+    font-style: normal;
 }
 
 [class^="gdrts-trend-"],
 [class*=" gdrts-trend-"] {
-  display: inline-block;
-  font: normal normal normal 14px/1 "gdrts-trend";
-  font-size: inherit;
-  text-rendering: auto;
+    display: inline-block;
+    font: normal normal normal 14px/1 "gdrts-trend";
+    font-size: inherit;
+    text-rendering: auto;
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .gdrts-trend-down:before {
-  content: "\64";
+    content: "\64";
 }
+
 .gdrts-trend-up:before {
-  content: "\75";
+    content: "\75";
 }
 
 /* Thumbs Rating */
@@ -44,21 +45,21 @@
 }
 
 .gdrts-thumbs-rating.gdrts-thumbs-theme-trend.gdrts-higher-is-zero {
-    background: #f8f8f8;
+    background: #F8F8F8;
     border-radius: 10px;
-    border: 2px solid #f0f0f0;
+    border: 2px solid #F0F0F0;
 }
 
 .gdrts-thumbs-rating.gdrts-thumbs-theme-trend.gdrts-higher-is-up {
-    background: #e7ffe7;
+    background: #E7FFE7;
     border-radius: 10px;
-    border: 2px solid #d0ffd0;
+    border: 2px solid #D0FFD0;
 }
 
 .gdrts-thumbs-rating.gdrts-thumbs-theme-trend.gdrts-higher-is-down {
-    background: #ffe7e7;
+    background: #FFE7E7;
     border-radius: 10px;
-    border: 2px solid #ffd0d0;
+    border: 2px solid #FFD0D0;
 }
 
 /* Theme: Trend */
@@ -71,21 +72,21 @@
 }
 
 .gdrts-thumbs-rating.gdrts-thumbs-theme-trend-comment.gdrts-higher-is-zero {
-    background: #f8f8f8;
+    background: #F8F8F8;
     border-radius: 10px;
-    border: 2px solid #f0f0f0;
+    border: 2px solid #F0F0F0;
 }
 
 .gdrts-thumbs-rating.gdrts-thumbs-theme-trend-comment.gdrts-higher-is-up {
-    background: #e7ffe7;
+    background: #E7FFE7;
     border-radius: 10px;
-    border: 2px solid #d0ffd0;
+    border: 2px solid #D0FFD0;
 }
 
 .gdrts-thumbs-rating.gdrts-thumbs-theme-trend-comment.gdrts-higher-is-down {
-    background: #ffe7e7;
+    background: #FFE7E7;
     border-radius: 10px;
-    border: 2px solid #ffd0d0;
+    border: 2px solid #FFD0D0;
 }
 
 .gdrts-thumbs-rating.gdrts-thumbs-theme-trend-comment {

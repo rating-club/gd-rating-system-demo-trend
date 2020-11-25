@@ -31,13 +31,19 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>
 */
 
-if (!defined('ABSPATH')) { exit; }
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-$gdrts_dt_dirname_basic = dirname(__FILE__).'/';
-$gdrts_dw_urlname_basic = plugins_url('/gd-rating-system-demo-trend/');
+$gdrts_dt_dirname_basic = dirname( __FILE__ ) . '/';
+$gdrts_dt_urlname_basic = plugins_url( '/gd-rating-system-demo-trend/' );
 
-define('GDRTS_DT_PATH', $gdrts_dt_dirname_basic);
-define('GDRTS_DT_URL', $gdrts_dw_urlname_basic);
+define( 'GDRTS_DT_PATH', $gdrts_dt_dirname_basic );
+define( 'GDRTS_DT_URL', $gdrts_dt_urlname_basic );
 
-require_once( GDRTS_DT_PATH . 'core/font.php');
-require_once( GDRTS_DT_PATH . 'core/demo.php');
+add_action( 'gdrts_init', 'gdrts_dt_load_entry_point' );
+
+function gdrts_dt_load_entry_point() {
+	require_once( GDRTS_DT_PATH . 'core/font.php' );
+	require_once( GDRTS_DT_PATH . 'core/demo.php' );
+}
